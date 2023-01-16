@@ -90,6 +90,11 @@ extern volatile int LLVMLibcModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED LLVMLibcModuleAnchorDestination =
     LLVMLibcModuleAnchorSource;
 
+// This anchor is used to force the linker to link the LobsterModule.
+extern volatile int LobsterModuleAnchorSource;
+static int LLVM_ATTRIBUTE_UNUSED LLVMLobsterModuleAnchorDestination =
+    LobsterModuleAnchorSource;
+
 // This anchor is used to force the linker to link the MiscModule.
 extern volatile int MiscModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED MiscModuleAnchorDestination =
